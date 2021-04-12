@@ -4,6 +4,7 @@ import { LandingPageComponent } from './public/landing-page/landing-page.compone
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
+  {path: 'home', component: LandingPageComponent},
   {path:'profile', loadChildren: () => import('./public/profile/profile.module')
   .then(m => m.ProfileModule)}
 ];
