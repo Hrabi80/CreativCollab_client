@@ -70,15 +70,15 @@
 }
 
 .service-item .fourth-service-icon {
-    background-image: url(../../../assets/img/fourth-white-icon.png);
+    background-image: url(/assets/img/fourth-white-icon.png);
 }
 
 .service-item:hover .fourth-service-icon {
-    background-image: url(../../../assets/img/fourth-main-icon.png);
+    background-image: url(/assets/img/fourth-main-icon.png);
 }
 
 .page-wraper {
-    background: url(../../../assets/img/page-bg.jpg) no-repeat center center fixed;
+    background: url(/assets/img/page-bg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
