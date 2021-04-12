@@ -3,9 +3,16 @@ import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { LandingPageComponent } from './public/landing-page/landing-page.component';
 
 const routes: Routes = [
-  {path: '', component: LandingPageComponent},
-  {path:'profile', loadChildren: () => import('./public/profile/profile.module')
-  .then(m => m.ProfileModule)}
+  {
+    path: '',
+    redirectTo:'/home',
+    pathMatch: 'full'
+  },
+  { path: 'test', loadChildren: () => import('./public/profile/profile.module').then(m => m.ProfileModule) },
+ /* {path:'profile', loadChildren: () => import('./public/profile/profile.module')
+  .then(m => m.ProfileModule)}*/
+  {path: 'home', component: LandingPageComponent},
+  
 ];
 
 @NgModule({
