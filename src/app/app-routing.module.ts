@@ -1,14 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
+import { LoginComponent } from './authentifications/login/login.component';
+import { SignUpComponent } from './authentifications/sign-up/sign-up.component';
 import { LandingPageComponent } from './public/landing-page/landing-page.component';
 import { ProfileComponent } from './public/profile/profile.component';
 
+
 const routes: Routes = [
-  {path: '', component: LandingPageComponent},
-  {path: 'home', component: LandingPageComponent},
-  {path: 'test', component: ProfileComponent},
-  {path:'profile', loadChildren: () => import('./public/profile/profile.module')
-  .then(m => m.ProfileModule)}
+  {
+    path: '',
+    redirectTo:'/home',
+    pathMatch: 'full'
+  },
+  { path: 'test', loadChildren: () => import('./public/profile/profile.module').then(m => m.ProfileModule) },
+  { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
+  { path: 'home', component: LandingPageComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'register', component: SignUpComponent}
+  
 ];
 
 @NgModule({
