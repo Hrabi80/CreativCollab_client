@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
+import { LoginComponent } from './authentifications/login/login.component';
+import { SignUpComponent } from './authentifications/sign-up/sign-up.component';
 import { LandingPageComponent } from './public/landing-page/landing-page.component';
 import { ProfileComponent } from './public/profile/profile.component';
+
 
 const routes: Routes = [
   {
@@ -10,9 +13,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   { path: 'test', loadChildren: () => import('./public/profile/profile.module').then(m => m.ProfileModule) },
- /* {path:'profile', loadChildren: () => import('./public/profile/profile.module')
-  .then(m => m.ProfileModule)}*/
-  {path: 'home', component: LandingPageComponent},
+  { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
+  { path: 'home', component: LandingPageComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'register', component: SignUpComponent}
   
 ];
 

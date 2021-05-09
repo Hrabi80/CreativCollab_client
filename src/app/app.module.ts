@@ -16,6 +16,8 @@ import { AssociationSectionComponent } from './public/landing-page/association-s
 import { SpeakersSectionComponent } from './public/landing-page/speakers-section/speakers-section.component';
 import { CompaniesSectionComponent } from './public/landing-page/companies-section/companies-section.component';
 import { AboutSectionComponent } from './public/landing-page/about-section/about-section.component';
+import { LoginComponent } from './authentifications/login/login.component';
+import { SignUpComponent } from './authentifications/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AboutSectionComponent } from './public/landing-page/about-section/about
     AssociationSectionComponent,
     SpeakersSectionComponent,
     CompaniesSectionComponent,
-    AboutSectionComponent
+    AboutSectionComponent,
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +40,7 @@ import { AboutSectionComponent } from './public/landing-page/about-section/about
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     JwtInterceptor ,{

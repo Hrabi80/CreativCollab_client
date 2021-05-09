@@ -1,0 +1,65 @@
+<h1>sdqsdqsdqsd</h1>
+
+<aside class="sidebar">
+    <nav>
+        <ul class="sidebar__nav">
+  
+          <li>
+              <a routerLink="/dashboard/clients_list" class="sidebar__nav__link">
+                  <i class="mdi mdi-account-circle"></i>
+                  <span class="sidebar__nav__text">Clients</span>
+              </a>
+          </li>
+          <!--
+            <li>
+                <a  class="sidebar__nav__link">
+                    <i class="mdi  mdi-account-cash-outline"></i>
+                    
+                    <span class="sidebar__nav__text">Devis</span>
+                </a>
+            </li>
+            <li>
+              <a  class="sidebar__nav__link">
+                  <i class="mdi mdi-folder-clock-outline"></i>
+                  <span class="sidebar__nav__text">Portfolio</span>
+              </a>
+          </li>
+  
+            <li>
+                <a  class="sidebar__nav__link">
+                  
+                    <i class="mdi mdi-lightbulb-on"></i>
+                    <span class="sidebar__nav__text">Nos services</span>
+                </a>
+            </li>
+        -->
+            <li>
+                <a routerLink="/dashboard/messages_list" class="sidebar__nav__link">
+                    <i class="mdi mdi-message-bulleted"></i>
+                    <span class="sidebar__nav__text">Messages</span>
+                </a>
+            </li>
+            
+            <li>
+                <a class="sidebar__nav__link">
+                    <i class="mdi mdi-email-newsletter"></i>
+                    <span class="sidebar__nav__text">Newsletter</span>
+                </a>
+            </li>
+           
+            <li>
+                <a href="#" class="sidebar__nav__link">
+                    <button><i class="mdi mdi-power"></i>
+                    
+                    <span class="sidebar__nav__text">Déconnecter</span> </button>
+                </a>
+            </li>
+        </ul>
+    </nav>
+  </aside>
+  
+    <section>
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </section>
