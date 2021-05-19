@@ -4,7 +4,7 @@
 .header {
     transition: all 0.5s;
     z-index: 997;
-    padding: 20px 0;
+    //padding: 20px 0;
   }
   
   .header.header-scrolled {
@@ -274,6 +274,10 @@
 //javascript callBack function // javascipt promises 
 // angular DOM manipulation  ==> 
 .navdown{
-    background-color: blueviolet;
+    background-color: rgb(203, 216, 219);
     max-height: 100px;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
+header{
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
 }
