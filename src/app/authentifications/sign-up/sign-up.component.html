@@ -1,4 +1,4 @@
-
+<app-navbar></app-navbar>
 <div class="session">
     <div class="left">
       <svg enable-background="new 0 0 300 302.5" version="1.1" viewBox="0 0 300 302.5" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -9,28 +9,27 @@
 </svg>      
     </div>
     <div class="right">
-    <form  class="log-in" autocomplete="off"> 
+    <form [formGroup]="signUp" class="log-in" autocomplete="off" (ngSubmit)="sign()"> 
       <h4>Welcome to <span>CreativCollab</span></h4>
       <p>We are happyu to see you here! Sign up to explore more:</p>
 
       <!-- Username-->
       <div class="floating-label">
-        <input type="text"  placeholder="Choose your username" autocomplete="off">
+        <input type="text"  formControlName="username" placeholder="Choose your username" autocomplete="off">
         <label for="email">username:</label>
     </div>
 
     <!--EMAIL-->
     <div class="floating-label">
-        <input placeholder="Write your email" type="text">
+        <input placeholder="Write your email" formControlName="mail" type="text">
         <label for="password">email:</label>
     </div>
 
 
     <!-- Password-->
         <div class="floating-label">
-            <input placeholder="Choose a password" type="password" type="password" id="password" autocomplete="off">
+            <input placeholder="Choose a password" formControlName="password" type="password" type="password" id="password" autocomplete="off">
             <label for="password">Password:</label>
-  
         </div>
  
 
@@ -38,9 +37,9 @@
 
        
        <div class="wrapper">
-        <input type="radio" name="select" id="option-1" checked>
-        <input type="radio" name="select" id="option-2">
-        <input type="radio" name="select" id="option-3">
+        <input type="radio" name="role" id="option-1" value="association" formControlName="role" checked>
+        <input type="radio" name="role" id="option-2" value="entreprise" formControlName="role">
+        <input type="radio" name="role" id="option-3" value="trainer" formControlName="role">
           <label for="option-1" class="option option-1">
             <div class="dot"></div>
              <span>Association</span>
@@ -56,8 +55,8 @@
           </label>
        </div>
 
-        <button type="submit" onClick="return false;">Log in</button>
-        <a href="https://codepen.io/elujambio/pen/yjwzGP" class="discrete" target="_blank">Basic version</a>
+        <button type="submit">SignUp</button>
+
         </form>
     </div>
 </div>

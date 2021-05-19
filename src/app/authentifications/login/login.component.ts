@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
       this._service.login2(this.f.userid.value, this.f.password.value)
       .pipe(first())
       .subscribe(
-        result => this.router.navigate(['dashboard']),
+        result => this.router.navigate(['']),
         err => this.error = 'Could not authenticate'
       );
 

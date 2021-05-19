@@ -20,9 +20,25 @@ export class AuthService {
   private _url = environment.api_url ;
   constructor(private _http: HttpClient) {
    }
-   
+
+
+
+   register(data:any){
+     return this._http.post(this._url+'/users/signup',data)
+   }
 
    login2(username: string, password: string): Observable<boolean> {
+    return this._http.post<{token: string}>(this._url+'/users/login', {username: username, password: password})
+      .pipe(
+        map(result => {
+          localStorage.setItem('access_token', result.token);
+          console.log(localStorage);
+          return true;
+        })
+      );
+  }
+
+   loginOLD(username: string, password: string): Observable<boolean> {
     
 
 
