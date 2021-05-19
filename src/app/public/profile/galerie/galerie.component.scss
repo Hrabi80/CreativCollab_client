@@ -1,0 +1,42 @@
+.tab-space {
+    padding: 20px 0 50px;
+}
+.profile-page .work .collections {
+    margin-top: 20px;
+}
+
+.back-background, .card-background, .front-background {
+    background-position: 50%;
+    background-size: cover !important;
+    text-align: center;
+}
+
+.back-background .card-body, .card-background .card-body, .front-background .card-body {
+    position: relative;
+    z-index: 2;
+    min-height: 280px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.navbar .dropdown .dropdown-menu, .navbar .dropdown.show .dropdown-menu {
+    background-color: transparent;
+    border: 0;
+    padding-bottom: 15px;
+    transition: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    transform: none!important;
+    width: auto;
+    margin-bottom: 15px;
+    padding-top: 0;
+    height: 300px;
+    animation: none;
+    opacity: 1;
+    overflow-y: scroll;
+}
+.tab-content>.active {
+    display: block;
+}

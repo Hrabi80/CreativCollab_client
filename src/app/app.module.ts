@@ -18,12 +18,13 @@ import { CompaniesSectionComponent } from './public/landing-page/companies-secti
 import { AboutSectionComponent } from './public/landing-page/about-section/about-section.component';
 import { LoginComponent } from './authentifications/login/login.component';
 import { SignUpComponent } from './authentifications/sign-up/sign-up.component';
+import { SharedModule } from './public/shared/shared.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    NavbarComponent,
     HeroSectionComponent,
     ContactComponent,
     FeaturesComponent,
@@ -40,7 +41,9 @@ import { SignUpComponent } from './authentifications/sign-up/sign-up.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule,
+    NgbModule
   ],
   providers: [
     JwtInterceptor ,{

@@ -1,0 +1,73 @@
+//timeline
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v41/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+  }
+  
+.info {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 70px 0 30px;
+  }
+  
+  
+  .info .info-title {
+    color: #3c4858;
+    margin: 1.75rem 0 .875rem;
+    font-weight: 700;
+    font-family: Roboto Slab, Times New Roman, serif;
+  }
+  
+  .info-horizontal .icon {
+    float: left;
+    margin-top: 24px;
+    margin-right: 10px;
+  }
+  
+  .info-horizontal .icon>i {
+    font-size: 2.25rem;
+  }
+  
+  .info-horizontal .description {
+    overflow: hidden;
+    font-weight: 300;
+  }
+  
+  .icon.icon-rose {
+    color: #e91e63;
+  }
+  
+  .icon.icon-primary {
+    color: #9c27b0;
+  }
+  
+  .icon.icon-info {
+    color: #00bcd4;
+  }
+  
+  
+  
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  
+  .description {
+    color: #999;
+  }
+  
