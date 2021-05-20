@@ -10,6 +10,7 @@ import { AppModule } from 'src/app/app.module';
 import { SharedModule } from '../shared/shared.module';
 import { TimelineComponent } from './timeline/timeline.component';
 import { GalerieComponent } from './galerie/galerie.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 @NgModule({
   declarations: [
     SideBarComponent,
@@ -17,7 +18,8 @@ import { GalerieComponent } from './galerie/galerie.component';
     DescriptionSectionComponent,
     ContactSectionComponent,
     TimelineComponent,
-    GalerieComponent],
+    GalerieComponent,
+    EditProfileComponent],
   imports: [
     CommonModule,
     ProfileRoutingModule,

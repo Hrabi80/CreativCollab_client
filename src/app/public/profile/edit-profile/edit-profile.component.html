@@ -1,0 +1,24 @@
+<div class="modal-header">
+    <h4 class="modal-title">Edit profile</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">description</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter object">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">description</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter object">
+        </div>     
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-primary">Send</button>
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>
