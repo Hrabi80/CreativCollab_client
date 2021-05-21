@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { user } from 'src/app/models/user';
+import { AuthService } from 'src/app/_services/auth.service';
 
 @Component({
   selector: 'app-description-section',
@@ -8,12 +9,19 @@ import { user } from 'src/app/models/user';
 })
 export class DescriptionSectionComponent implements OnInit {
   user!:user;
-  constructor() { }
+  id!:string;
+  constructor(private authServcie : AuthService) { }
 
   ngOnInit(): void {
-    this.user=<user>JSON.parse(localStorage.getItem('myuser')!);
-    console.log('this.user',this.user);
-    console.log('this.user id :',this.user._id);
+    this.id= this.authServcie.getUserIdFromLocalStorage();
+    this.authServcie.getUserById(this.id)
+    .subscribe((res:user)=>{
+      this.user= res;
+      console.log('this.user',this.user);
+      console.log('this.user id :',this.user._id);
+     })
+   // this.user=<user>JSON.parse(localStorage.getItem('myuser')!);
+    
 
   }
 

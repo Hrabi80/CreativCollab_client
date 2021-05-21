@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/_services/auth.service';
 
 @Component({
   selector: 'app-skill-panel',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skill-panel.component.scss']
 })
 export class SkillPanelComponent implements OnInit {
-
-  constructor() { }
+  ownProfile : boolean=false;
+  constructor(private auth :AuthService) { }
 
   ngOnInit(): void {
+  
   }
 
 }

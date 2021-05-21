@@ -11,7 +11,7 @@
           <li><a class="nav-link scrollto" href="#values">Browse</a></li>
           <li><a class="nav-link scrollto active" href="#features">Tutorial</a></li>
           <li><a class="nav-link scrollto">Contact</a></li>
-          <li><a *ngIf="isconnected" class="nav-link scrollto" routerLink="/profile">My profile</a></li>
+          <li *ngIf="isconnected"><a class="nav-link scrollto" routerLink="/profile/{{id}}">My profile</a></li>
           <li *ngIf="isconnected == false"><button class="getstarted scrollto" routerLink="/login">Sign In</button></li>
           <li *ngIf="isconnected == false"><a class="getstarted scrollto" routerLink="/register">Sign Up</a></li>
           <li *ngIf="isconnected"><button class="getstarted scrollto" (click)="logout()">Logout</button></li>
