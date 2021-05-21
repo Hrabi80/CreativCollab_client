@@ -6,7 +6,7 @@ import { SidebarComponent } from "./sidebar/sidebar.component";
 
 const routes: Routes = [
     
-    { path: '', component: SidebarComponent 
+    { path: 'admin', component: SidebarComponent 
     /*
     children:[
         {path:'clients_list', component:ClientsComponent},

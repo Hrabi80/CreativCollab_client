@@ -77,16 +77,18 @@
   }
   
   .navbar .getstarted {
-    background: #4154f1;
+    background: #41f1a8;
     padding: 8px 20px;
     margin-left: 30px;
     border-radius: 4px;
     color: #fff;
+    cursor: pointer;
   }
   
   .navbar .getstarted:hover {
     color: #fff;
     background: #5969f3;
+    cursor: pointer;
   }
   
   .navbar .dropdown ul {

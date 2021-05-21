@@ -1,4 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/_services/auth.service';
+import { Router } from '@angular/router';
+import { user } from 'src/app/models/user';
+
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +10,20 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
+  isconnected:boolean=true;
+  user!:user;
+  id!:string;
+  constructor(private authservice:AuthService,
+              private router : Router) { }
 
   ngOnInit(): void {
+   this.isconnected= this.authservice.loggedIn();
+    console.log("now ",this.isconnected);
+   if(this.isconnected){
+     this.id = this.authservice.getUserIdFromLocalStorage();
+     console.log("my id is ", this.id);
+   }
+   
   }
   @HostListener('document:mousewheel', ['$event'])
   @HostListener('document:keydow', ['$event'])
@@ -20,8 +34,17 @@ export class NavbarComponent implements OnInit {
       console.log("heeeeey yosra i scrolll ....");
       element!.classList.add('navdown');
     } else {
+
       element!.classList.remove('navdown');
     }
+  }
+
+  logout(){
+    this.authservice.logout();
+    setTimeout(() => {
+      this.router.navigate(['/home'])
+      //location.reload();
+    }, 200);
   }
 
 }

@@ -21,6 +21,7 @@ import { SignUpComponent } from './authentifications/sign-up/sign-up.component';
 import { SharedModule } from './public/shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CompaniesSectionComponent,
     AboutSectionComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,7 @@ import { ProfileComponent } from "./profile.component";
 
 const routes: Routes = [
     
-    { path: 'test', component: ProfileComponent ,children:[]}
+    { path: 'profile', component: ProfileComponent ,children:[]}
 ]
 
 @NgModule({

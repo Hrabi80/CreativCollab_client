@@ -12,7 +12,7 @@ const routes: Routes = [
     redirectTo:'/home',
     pathMatch: 'full'
   },
-  { path: 'test', loadChildren: () => import('./public/profile/profile.module').then(m => m.ProfileModule) },
+  { path: 'profile', loadChildren: () => import('./public/profile/profile.module').then(m => m.ProfileModule) },
   { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
   { path: 'home', component: LandingPageComponent},
   { path: 'login', component: LoginComponent},

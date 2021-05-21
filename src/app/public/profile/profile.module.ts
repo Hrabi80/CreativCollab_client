@@ -10,6 +10,7 @@ import { AppModule } from 'src/app/app.module';
 import { SharedModule } from '../shared/shared.module';
 import { TimelineComponent } from './timeline/timeline.component';
 import { GalerieComponent } from './galerie/galerie.component';
+import { TrainerModule } from 'src/app/trainer/trainer.module';
 @NgModule({
   declarations: [
     SideBarComponent,
@@ -21,7 +22,8 @@ import { GalerieComponent } from './galerie/galerie.component';
   imports: [
     CommonModule,
     ProfileRoutingModule,
-    SharedModule
+    SharedModule,
+    TrainerModule
   ]
 })
 export class ProfileModule { }
