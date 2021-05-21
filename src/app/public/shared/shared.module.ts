@@ -7,6 +7,9 @@ import { TrainersComponent } from './browse/trainers/trainers.component';
 import { CompaniesComponent } from './browse/companies/companies.component';
 import { ComingEventsComponent } from './browse/coming-events/coming-events.component';
 import { ReadMoreComponent } from './browse/coming-events/read-more/read-more.component'
+import { RouterModule, Routes } from '@angular/router';
+import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -20,13 +23,17 @@ import { ReadMoreComponent } from './browse/coming-events/read-more/read-more.co
     ReadMoreComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    ReactiveFormsModule
+   
   ],
   exports: [
     NavbarComponent,
     ComingEventsComponent,
     AssociationsComponent,
     TrainersComponent,
-    CompaniesComponent,]
+    CompaniesComponent,
+    AssociationsComponent]
 })
 export class SharedModule { }

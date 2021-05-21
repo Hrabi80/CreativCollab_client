@@ -2,6 +2,7 @@ import { Component, NgModule } from "@angular/core";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import {MessageComponent} from "src/app/public/shared/message/message.component"
 import {CreateEventComponent} from "src/app/association/create-event/create-event.component"
+import { EditProfileComponent } from "./edit-profile/edit-profile.component";
 @Component({
     selector:'app-profile',
     templateUrl:'./profile.component.html',
@@ -16,5 +17,8 @@ export class ProfileComponent{
 
     openmessage(){
       const modalRef = this.modalService.open(CreateEventComponent);
+    }
+    openeditprofile(){
+      const modalRef = this.modalService.open(EditProfileComponent);
     }
 }

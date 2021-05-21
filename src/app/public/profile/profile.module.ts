@@ -11,6 +11,7 @@ import { SharedModule } from '../shared/shared.module';
 import { TimelineComponent } from './timeline/timeline.component';
 import { GalerieComponent } from './galerie/galerie.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { TrainerModule } from 'src/app/trainer/trainer.module';
 @NgModule({
   declarations: [
     SideBarComponent,
@@ -23,7 +24,8 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
   imports: [
     CommonModule,
     ProfileRoutingModule,
-    SharedModule
+    SharedModule,
+    TrainerModule
   ]
 })
 export class ProfileModule { }

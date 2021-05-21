@@ -1,15 +1,19 @@
 import { Component, OnInit, HostListener, Host } from '@angular/core';
+import { AuthService } from 'src/app/_services/auth.service';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-navbar3',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
- 
-  constructor() { }
+  isconnected:boolean=false;
+  constructor(private authservice:AuthService) { }
 
   ngOnInit(): void {
+
+    
+    
   }
 @HostListener('document:mousewheel',['$event'])
 @HostListener('document:keydow',['$event'])
