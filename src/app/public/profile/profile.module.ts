@@ -5,7 +5,6 @@ import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
 import { DescriptionSectionComponent } from './description-section/description-section.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
-import { NavbarComponent } from '../navbar/navbar.component';
 import { AppModule } from 'src/app/app.module';
 import { SharedModule } from '../shared/shared.module';
 import { TimelineComponent } from './timeline/timeline.component';

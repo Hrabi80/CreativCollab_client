@@ -8,7 +8,6 @@ import { ReactiveFormsModule ,FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './public/landing-page/landing-page.component';
-import { NavbarComponent } from './public/navbar/navbar.component';
 import { HeroSectionComponent } from './public/landing-page/hero-section/hero-section.component';
 import { ContactComponent } from './public/landing-page/contact/contact.component';
 import { FeaturesComponent } from './public/landing-page/features/features.component';

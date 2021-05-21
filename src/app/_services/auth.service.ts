@@ -23,7 +23,7 @@ export class AuthService {
    }
 
 
-   getUserById(id:any){
+   getUserById(id:any): Observable<any>{
       return this._http.get<user>(this._url+'/users/getUserById/'+id);
    }
    register(data:any){

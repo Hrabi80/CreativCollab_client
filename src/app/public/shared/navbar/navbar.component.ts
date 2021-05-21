@@ -13,6 +13,7 @@ export class NavbarComponent implements OnInit {
   isconnected:boolean=true;
   user!:user;
   id!:string;
+  
   constructor(private authservice:AuthService,
               private router : Router) { }
 
@@ -31,7 +32,6 @@ export class NavbarComponent implements OnInit {
   ondocumentMousewheel(event: any) {
     let element = document.querySelector('.header');
     if (document.body.scrollTop > 480 || document.documentElement.scrollTop > 480) {
-      console.log("heeeeey yosra i scrolll ....");
       element!.classList.add('navdown');
     } else {
 
@@ -43,7 +43,6 @@ export class NavbarComponent implements OnInit {
     this.authservice.logout();
     setTimeout(() => {
       this.router.navigate(['/home'])
-      //location.reload();
     }, 200);
   }
 
