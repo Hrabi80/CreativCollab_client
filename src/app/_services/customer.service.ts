@@ -20,4 +20,7 @@ export class CustomerService {
     return this._http.put(this._url+'/customer/editContact',data)
    }
 
+   consultprofileAssociation(id:number){
+    return this._http.get(this._url+'/customer/getAssociationById/'+id)
+   }
 }

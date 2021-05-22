@@ -15,7 +15,6 @@ export class MessageComponent implements OnInit {
   data!:message
   constructor(
     public activeModal: NgbActiveModal,
-    private authService : AuthService,
     private service : CustomerService,
     private fb : FormBuilder  ) {}
   ngOnInit(): void {
