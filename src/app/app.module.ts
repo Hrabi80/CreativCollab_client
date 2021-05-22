@@ -19,6 +19,7 @@ import { LoginComponent } from './authentifications/login/login.component';
 import { SignUpComponent } from './authentifications/sign-up/sign-up.component';
 import { SharedModule } from './public/shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowseComponent } from './public/landing-page/browse/browse.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AboutSectionComponent,
     LoginComponent,
     SignUpComponent,
+    BrowseComponent,
   ],
   imports: [
     BrowserModule,
