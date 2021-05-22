@@ -26,6 +26,9 @@ export class AuthService {
    getUserById(id:any): Observable<any>{
       return this._http.get<user>(this._url+'/users/getUserById/'+id);
    }
+   getAllUsers(){
+    return this._http.get<Array<user>>(this._url+'/users/getUsers');
+  }
    register(data:any){
      return this._http.post(this._url+'/users/signup',data)
    }
@@ -63,6 +66,7 @@ export class AuthService {
     let mm=localStorage.getItem('access_token');
     if(localStorage.getItem('access_token') != null){
       let jwtData = mm!.split('.')[1];
+      //decoder token
           let decodedJwtJsonData = window.atob(jwtData);
           
           let decodedJwtData = JSON.parse(decodedJwtJsonData);

@@ -1,0 +1,22 @@
+  <!-- ======= Recent Blog Posts Section ======= -->
+  <section id="recent-blog-posts" class="recent-blog-posts">
+
+    <div class="container" data-aos="fade-up">
+      <header class="section-header">
+        <h2>Associations</h2>
+        <p>Discover with us </p>
+      </header>
+      <div class="row">
+        <div *ngFor="let user of data" class="col-lg-4">
+          <div class="post-box">
+            <div class="post-img"><img src="assets/img/Associations/croissant_rouge.jpg" class="img-fluid" alt="" style="
+            max-width: 300px;max-height: 200px;display: block;margin-left: auto;margin-right: auto;
+            "></div>
+            <span class="post-date">founded in 7 octobre 1956</span>
+            <h3 class="post-title">{{user.mail}}</h3>
+            <a href="blog-singe.html" class="readmore stretched-link mt-auto" routerLink="/profile/{{user._id}}"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Recent Blog Posts Section -->

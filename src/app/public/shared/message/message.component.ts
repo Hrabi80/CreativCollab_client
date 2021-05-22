@@ -1,5 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { message } from 'src/app/models/message';
+import { AuthService } from 'src/app/_services/auth.service';
+import { CustomerService } from 'src/app/_services/customer.service';
 
 @Component({
   selector: 'app-message',
@@ -7,10 +11,24 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./message.component.scss']
 })
 export class MessageComponent implements OnInit {
-  //@Input() name;
-
-  constructor(public activeModal: NgbActiveModal) {}
+  messageForm!:FormGroup
+  data!:message
+  constructor(
+    public activeModal: NgbActiveModal,
+    private service : CustomerService,
+    private fb : FormBuilder  ) {}
   ngOnInit(): void {
+    this.messageForm=this.fb.group({  
+      object: ['', Validators.required],  
+      message: ['', Validators.required]  
+   });
+  }
+
+  send(){
+    this.service.sendmessage(this.messageForm.value)
+    .subscribe((res)=>{
+      console.log("my res",res);
+    })
   }
 
 }

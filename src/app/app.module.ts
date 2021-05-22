@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import {ProfileModule} from './public/profile/profile.module';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FormGroup, FormControl } from '@angular/forms';
 import { ReactiveFormsModule ,FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
