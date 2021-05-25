@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from "@angular/common/http";
 import { environment } from 'src/environments/environment';
-import { Event } from '@angular/router';
+import { event } from '../models/event';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,10 @@ export class EventService {
   
   CreateEvent(data: Event) {
     return this._http.post(this._url + '/event', data);
+  }
+
+  getAllEvents(){
+    return this._http.get<Array<event>>(this._url+'/events');
   }
 
   EditEvent(data: Event){
