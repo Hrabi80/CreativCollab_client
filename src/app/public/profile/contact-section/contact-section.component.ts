@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EditContactComponent } from '../edit-contact/edit-contact.component';
 
@@ -8,10 +8,11 @@ import { EditContactComponent } from '../edit-contact/edit-contact.component';
   styleUrls: ['./contact-section.component.scss']
 })
 export class ContactSectionComponent implements OnInit {
-
+  @Input() isOwnContact!:boolean;
   constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
+    console.log("my variable is",this.isOwnContact);
   }
   openeditconatct(){
     const modalRef=this.modalService.open(EditContactComponent)
