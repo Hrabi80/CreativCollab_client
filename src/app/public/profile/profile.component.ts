@@ -15,7 +15,7 @@ export class ProfileComponent {
   constructor(private modalService: NgbModal,
     private authService: AuthService,
     private route: ActivatedRoute) { }
-  user!: any;
+  user!: user;
   id: any;
   current_user_id: any;
   isOwn: boolean = false;
@@ -25,9 +25,9 @@ export class ProfileComponent {
     this.current_user_id = this.authService.getUserIdFromLocalStorage();
     if (this.current_user_id == this.id)
       this.isOwn = true;
-    this.authService.getUserById(this.id).subscribe((res: any) => {
+    this.authService.getUserById(this.id).subscribe((res: user) => {
       this.user = res;
-      console.log("role in profiledddddddddddddddddddd=== ", this.user);
+      console.log("role in profileddd=== ", this.user);
     })
   }
   open() {
