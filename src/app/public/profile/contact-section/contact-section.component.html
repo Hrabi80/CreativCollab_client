@@ -3,17 +3,22 @@
         <div class="card-body">
             <!-- <h6 class="card-category text-info">Contact</h6> -->
             <ul>
-                <li><a href="#pablo" class="btn btn-just-icon btn-link btn-facebook"><i class="fa fa-facebook"></i>www.facebook.com/name</a>
+                <li><a href="#pablo" class="btn btn-just-icon btn-link btn-facebook"><i
+                            class="fa fa-facebook"></i>www.facebook.com/name</a>
                 </li>
-                <li><a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i>twitter.com/name</a>
+                <li><a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i
+                            class="fa fa-twitter"></i>twitter.com/name</a>
                 </li>
                 <li><a href="#pablo" class="btn btn-just-icon btn-link btn-google"><i
-                    class="fa fa-google"></i>association @gmail.com</a></li>
-                <li><a href="#pablo" class="btn btn-just-icon btn-link btn-phone"><i
-                            class="fa fa-phone"></i>+216 98 245 107</a></li>
+                            class="fa fa-google"></i>association @gmail.com</a></li>
+                <li><a href="#pablo" class="btn btn-just-icon btn-link btn-phone"><i class="fa fa-phone"></i>+216 98 245
+                        107</a></li>
+                <li><a href="#pablo" class="btn btn-just-icon btn-link btn-linkedin"><i
+                            class="fa fa-linkedin"></i>twitter.com/name</a>
+                </li>
             </ul>
 
-            <button class="btn-primary" (click)="openeditconatct()">Edit contact</button>
+            <button class="btn-primary" (click)="openeditconatct()" *ngIf="isOwnContact">Edit contact</button>
         </div>
     </div>
 </div>

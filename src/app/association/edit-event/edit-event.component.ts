@@ -1,30 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { CustomerService } from 'src/app/_services/customer.service';
 import { EventService } from 'src/app/_services/event.service';
 
 @Component({
-  selector: 'app-create-event',
-  templateUrl: './create-event.component.html',
-  styleUrls: ['./create-event.component.scss']
+  selector: 'app-edit-event',
+  templateUrl: './edit-event.component.html',
+  styleUrls: ['./edit-event.component.scss']
 })
-export class CreateEventComponent implements OnInit {
-  createEventForm!: FormGroup
+export class EditEventComponent implements OnInit {
+  EditEventForm!:FormGroup
   constructor(
     public activeModal: NgbActiveModal,
-    private service : EventService ,
-    private fb: FormBuilder) { }
+    private fb : FormBuilder,
+    private service : EventService
+    ) { }
 
   ngOnInit(): void {
-    this.createEventForm = this.fb.group({
+    this.EditEventForm = this.fb.group({
       EventName: ['', Validators.required],
       EventDescription: ['', Validators.required],
       EventDate: ['', Validators.required]
     });
   }
-  CreateEvent(){
-    this.service.CreateEvent(this.createEventForm.value)
+
+  EditEvent(){
+    this.service.EditEvent(this.EditEventForm.value)
     .subscribe((res)=>{
       console.log("my res",res);
     })

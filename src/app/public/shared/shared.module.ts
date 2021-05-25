@@ -7,8 +7,8 @@ import { TrainersComponent } from './browse/trainers/trainers.component';
 import { CompaniesComponent } from './browse/companies/companies.component';
 import { ComingEventsComponent } from './browse/coming-events/coming-events.component';
 import { ReadMoreComponent } from './browse/coming-events/read-more/read-more.component'
-import { RouterModule, Routes } from '@angular/router';
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule} from '@angular/router';
+import {ReactiveFormsModule } from '@angular/forms';
 
 
 
