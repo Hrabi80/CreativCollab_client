@@ -16,6 +16,10 @@ export class CustomerService {
     return this._http.post(this._url+'/customer/sendMessage',data)
    }
 
+   editAbout(data:string){
+    return this._http.put(this._url+'/users/update',data)
+   }
+
    editcontact(data:contact){
     return this._http.put(this._url+'/customer/editContact',data)
    }

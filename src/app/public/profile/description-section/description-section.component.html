@@ -1,10 +1,13 @@
 <div class="col description">
-    <p>
+    <p *ngIf="user.about"> {{user.about}}</p>
+    <p *ngIf="user.about == null">
+        <!---
         hey my id is : {{user._id}}
        
-        and my name is : {{user.username}}
-        my description is here ...
-        Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records
-        all of his own music.
-    </p>
+        and my name is : {{user.username}}-->
+        Tunisian JS-Community run by volunteers. We discuss about javascript ecosystem , 
+        tips and tricks each month in Tunisia. We are happy to be a part of CreativCollab project 
+        and we are open for sponsoring and contribution for open source projects  
+</p>
+<button *ngIf="item" (click)="openEditDescription()" >edit</button>
 </div>

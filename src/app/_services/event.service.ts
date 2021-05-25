@@ -11,7 +11,7 @@ export class EventService {
   constructor(private _http: HttpClient) { }
   
   CreateEvent(data: Event) {
-    return this._http.post(this._url + '/event', data)
+    return this._http.post(this._url + '/event', data);
   }
 
   EditEvent(data: Event){

@@ -6,6 +6,7 @@ import { EditProfileComponent } from "./edit-profile/edit-profile.component";
 import { user } from "src/app/models/user";
 import { AuthService } from "src/app/_services/auth.service";
 import { ActivatedRoute } from '@angular/router';
+import { EditDescriptionComponent } from "./description-section/edit-description/edit-description.component";
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -15,7 +16,7 @@ export class ProfileComponent {
   constructor(private modalService: NgbModal,
     private authService: AuthService,
     private route: ActivatedRoute) { }
-  user!: any;
+  user!: user;
   id: any;
   current_user_id: any;
   isOwn: boolean = false;
@@ -25,9 +26,9 @@ export class ProfileComponent {
     this.current_user_id = this.authService.getUserIdFromLocalStorage();
     if (this.current_user_id == this.id)
       this.isOwn = true;
-    this.authService.getUserById(this.id).subscribe((res: any) => {
+    this.authService.getUserById(this.id).subscribe((res: user) => {
       this.user = res;
-      console.log("role in profiledddddddddddddddddddd=== ", this.user);
+      console.log("role in profileddd=== ", this.user);
     })
   }
 
@@ -39,5 +40,9 @@ export class ProfileComponent {
   }
   openEditProfile() {
     const modalRef = this.modalService.open(EditProfileComponent);
+  }
+
+  openEditDescription() {
+    const modalRef = this.modalService.open(EditDescriptionComponent);
   }
 }

@@ -26,7 +26,7 @@ export class CreateEventComponent implements OnInit {
   CreateEvent(){
     this.service.CreateEvent(this.createEventForm.value)
     .subscribe((res)=>{
-      console.log("my res",res);
+      console.log("success",res);
     })
 
   }

@@ -29,7 +29,10 @@ export class AuthService {
    getAllUsers(){
     return this._http.get<Array<user>>(this._url+'/users/getUsers');
   }
-   register(data:any){
+  updateUser(){
+    //return this._http.put(data:any)
+  }
+  register(data:any){
      return this._http.post(this._url+'/users/signup',data)
    }
 
@@ -38,6 +41,7 @@ export class AuthService {
       .pipe(
         map(result => {
           localStorage.setItem('access_token', result.token);
+          
           localStorage.setItem('isconnected', 'true');
           console.log(localStorage);
           return true;
