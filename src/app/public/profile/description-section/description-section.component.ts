@@ -1,6 +1,8 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { user } from 'src/app/models/user';
 import { AuthService } from 'src/app/_services/auth.service';
+import { EditDescriptionComponent } from './edit-description/edit-description.component';
 
 @Component({
   selector: 'app-description-section',
@@ -11,7 +13,8 @@ export class DescriptionSectionComponent implements OnInit {
   user!:user;
   id!:string;
   @Input() item!:boolean;
-  constructor(private authServcie : AuthService) { }
+  constructor(private authServcie : AuthService,
+            private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.id= this.authServcie.getUserIdFromLocalStorage();
@@ -27,6 +30,10 @@ export class DescriptionSectionComponent implements OnInit {
 
   edit(){
    
+  }
+
+  openEditDescription() {
+    const modalRef = this.modalService.open(EditDescriptionComponent);
   }
 
 }
