@@ -12,6 +12,7 @@ import { CompaniesComponent } from './public/shared/browse/companies/companies.c
 import { TrainersComponent } from './public/shared/browse/trainers/trainers.component';
 import { MessageComponent } from './public/shared/message/message.component';
 import { TrainerComponent } from './trainer/trainer.component';
+import { ComingEventsComponent } from './public/shared/browse/coming-events/coming-events.component';
 
 
 const routes: Routes = [
@@ -30,7 +31,9 @@ const routes: Routes = [
   
   { path: 'browse-association', component: AssociationsComponent},
   { path: 'browse-companies', component: CompaniesComponent},
-  { path: 'browse-trainers', component: TrainersComponent}
+  { path: 'browse-trainers', component: TrainersComponent},
+  { path: 'browse-events', component: ComingEventsComponent },
+  { path: 'browse-events/:id', component: ComingEventsComponent }
 ];
 
 @NgModule({
