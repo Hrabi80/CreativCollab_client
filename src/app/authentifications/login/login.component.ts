@@ -4,6 +4,7 @@ import { AuthService } from 'src/app/_services/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';  
 import { first } from 'rxjs/operators';
 import { user } from 'src/app/models/user';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -59,6 +60,11 @@ export class LoginComponent implements OnInit {
             console.log("res",res);
             this.role = res.role;
             localStorage.setItem('myuser', JSON.stringify(res));
+            swal.fire(
+              `welcome back${res.username}`,
+              'You logged in successfully !',
+              'success'
+            )
           })
 
           console.log('jwtData: ' + jwtData);
@@ -72,7 +78,7 @@ export class LoginComponent implements OnInit {
              // this.router.navigate(['/home'])
              this.router.navigate(['/dashboard/admin']);
             }else{
-              this.router.navigate(['/profile'])
+              this.router.navigate(['/home'])
             }
           }, 2500);
           //this.router.navigate(['/profile'])

@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h4 class="modal-title">Edit your description</h4>
+    <h4 class="modal-title">Customize your intoduction</h4>
     <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -8,8 +8,8 @@
     <form [formGroup]="descriptionForm">
 
         <div class="form-group">
-            <label for="exampleInputEmail1">your description</label>
-            <textarea class="form-control" formControlName="description"></textarea>
+            <label for="exampleInputEmail1">A description about yourself</label>
+            <textarea class="form-control" formControlName="about"></textarea>
         </div>
 
 

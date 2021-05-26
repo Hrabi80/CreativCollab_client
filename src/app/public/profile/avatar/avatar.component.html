@@ -1,0 +1,49 @@
+
+<form [formGroup]="form">
+<input 
+  type="radio" name="avatar" 
+  id="sad" class="input-hidden" value="avatar1.png" formControlName="avatar"/>
+<label for="sad">
+  <img 
+    src="assets/img/avatar/avatar1.png" 
+    alt="I'm sad" />
+</label>
+
+<input 
+  type="radio" name="avatar"
+  id="happy" class="input-hidden" value="avatar2.png" formControlName="avatar"/>
+<label for="happy">
+  <img 
+    src="assets/img/avatar/avatar2.png" 
+    alt="I'm happy" />
+</label>
+<input 
+  type="radio" name="avatar"
+  id="happy6" class="input-hidden" value="avatar5.jpeg" formControlName="avatar" />
+<label for="happy6">
+  <img 
+    src="assets/img/avatar/avatar5.jpeg" 
+    alt="I'm happy" />
+</label>
+<input 
+  type="radio" name="avatar"
+  id="happy5" class="input-hidden" value="avatar4.png" formControlName="avatar"/>
+<label for="happy5">
+  <img 
+    src="assets/img/avatar/avatar4.png" 
+    alt="I'm happy" />
+</label>
+<input 
+  type="radio" name="avatar"
+  id="happy3" class="input-hidden" value="avatar6.png" formControlName="avatar" />
+<label for="happy3">
+  <img 
+    src="assets/img/avatar/avatar6.png" 
+    alt="I'm happy" />
+</label>
+<br>
+<button class="btn-get-started " (click)="updateAvatar()">update avatar</button>
+</form>
+<h2>Or :</h2> <br>
+<button class="btn-get-started up">uplaod photo</button>
+

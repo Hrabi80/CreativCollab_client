@@ -14,6 +14,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { TrainerModule } from 'src/app/trainer/trainer.module';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
 import { EditDescriptionComponent } from './description-section/edit-description/edit-description.component';
+import { AvatarComponent } from './avatar/avatar.component';
 @NgModule({
   declarations: [
     SideBarComponent,
@@ -24,7 +25,8 @@ import { EditDescriptionComponent } from './description-section/edit-description
     GalerieComponent,
     EditProfileComponent,
     EditContactComponent,
-    EditDescriptionComponent],
+    EditDescriptionComponent,
+    AvatarComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,

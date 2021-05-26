@@ -1,13 +1,10 @@
 <div class="col description">
     <p *ngIf="user.about"> {{user.about}}</p>
-    <p *ngIf="user.about == null">
-        <!---
-        hey my id is : {{user._id}}
-       
-        and my name is : {{user.username}}-->
-        Tunisian JS-Community run by volunteers. We discuss about javascript ecosystem , 
-        tips and tricks each month in Tunisia. We are happy to be a part of CreativCollab project 
-        and we are open for sponsoring and contribution for open source projects  
+    <p *ngIf="user.about == null && item">
+    Dear customer, CreativCollab team is very happy that you have registred in the platform ,
+    we are certain and surly that you are ready to help in the socialty and contribute in the benefit of 
+    communities. Please Write us about you and give a brieve introduction about you in order to help others
+    to recognize your activities and portfolio. 
 </p>
-<button *ngIf="item" (click)="openEditDescription()" >edit</button>
+<button *ngIf="item" (click)="openEditDescription()" class="btn-get-started justify-content-center align-self-center" > <i class="icon-cogs"></i>  Customize your intro</button>
 </div>

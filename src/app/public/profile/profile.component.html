@@ -10,7 +10,9 @@
             <div class="col-lg-3 order-lg-2">
               <div class="card-profile-image">
                 <a href="#">
-                  <img src="assets/img/avatar/avatar3.png" class="rounded-circle">
+
+                  <img *ngIf="user.avatar != null" src="assets/img/avatar/{{user.avatar}}" class="rounded-circle">
+                  <img *ngIf="user.avatar == null" src="assets/img/avatar/avatar1.png" class="rounded-circle">
                                    
                 </a>
               </div>
@@ -19,7 +21,7 @@
            
           <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
             <div class="col-lg-6 order-lg-2">
-              <button class="btn-primary">Add photo</button>
+              <button class="avatar" (click)="openAvatar()">Change avatar</button>
             </div>
             <div class="d-flex justify-content-between">
               <button class="btn btn-sm btn-info mr-4" (click)="openmessage()" *ngIf="user.role == 'association'">Create event</button>

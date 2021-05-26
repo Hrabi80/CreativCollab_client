@@ -3,6 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { user } from 'src/app/models/user';
 import { AuthService } from 'src/app/_services/auth.service';
 import { EditDescriptionComponent } from './edit-description/edit-description.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-description-section',
@@ -14,10 +15,11 @@ export class DescriptionSectionComponent implements OnInit {
   id!:string;
   @Input() item!:boolean;
   constructor(private authServcie : AuthService,
-            private modalService: NgbModal) { }
+            private modalService: NgbModal,
+            private route : ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.id= this.authServcie.getUserIdFromLocalStorage();
+    this.id = this.route.snapshot.paramMap.get('id')!;
     this.authServcie.getUserById(this.id)
     .subscribe((res:user)=>{
       this.user= res;

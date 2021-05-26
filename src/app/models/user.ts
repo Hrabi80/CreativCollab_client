@@ -1,3 +1,5 @@
+import { skill } from "./skills";
+
 export interface user{
     _id:string,
     username:string;
@@ -9,4 +11,10 @@ export interface user{
     twitter: String;
     avatar:String;
     tel:String;
+    place:String;
+    domaine1: String;
+    domaine2: String;
+    domaine3: String;
+    domaine4: String;
+    skills:[skill];
 }

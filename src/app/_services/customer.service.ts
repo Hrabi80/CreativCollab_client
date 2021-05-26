@@ -13,18 +13,21 @@ export class CustomerService {
   constructor(private _http: HttpClient) {   
    }
    sendmessage(data:message){
-    return this._http.post(this._url+'/customer/sendMessage',data)
+    return this._http.post(this._url+'/customer/sendMessage',data);
    }
 
-   editAbout(data:string){
-    return this._http.put(this._url+'/users/update',data)
+   editAbout(data:any,id:any){
+    return this._http.put(this._url+'/users/updateUser/'+id,data);
+   }
+   updateCustomer(data:any,id:any){
+    return this._http.put(this._url+'/users/updateUser/'+id,data);
    }
 
    editcontact(data:contact){
-    return this._http.put(this._url+'/customer/editContact',data)
+    return this._http.put(this._url+'/customer/editContact',data);
    }
 
    consultprofileAssociation(id:number){
-    return this._http.get(this._url+'/customer/getAssociationById/'+id)
+    return this._http.get(this._url+'/customer/getAssociationById/'+id);
    }
 }
