@@ -9,6 +9,7 @@ import { ComingEventsComponent } from './browse/coming-events/coming-events.comp
 import { ReadMoreComponent } from './browse/coming-events/read-more/read-more.component'
 import { RouterModule} from '@angular/router';
 import {ReactiveFormsModule } from '@angular/forms';
+import { EventDetailsComponent } from './browse/event-details/event-details.component';
 
 
 
@@ -20,7 +21,8 @@ import {ReactiveFormsModule } from '@angular/forms';
     TrainersComponent,
     CompaniesComponent,
     ComingEventsComponent,
-    ReadMoreComponent
+    ReadMoreComponent,
+    EventDetailsComponent
   ],
   imports: [
     CommonModule,

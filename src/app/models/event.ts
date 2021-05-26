@@ -1,7 +1,12 @@
+import { user } from "./user";
+
 export interface event{
     _id:string,
     name:string;
-    description:string;
+    date:string;
+    introduction:string;
     inscriptionLink:string;
-    place:string;
+    link:string;
+    lieu:string;
+    owner:user
 }

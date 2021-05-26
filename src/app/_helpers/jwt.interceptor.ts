@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 @Injectable()
 
 export class JwtInterceptor implements HttpInterceptor {
-    private _URLPattern = environment.api_url + '/event';
+    private _URLPattern = environment.api_url + '/event/';
     constructor(private auth: AuthService
         ) { 
          

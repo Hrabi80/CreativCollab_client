@@ -18,15 +18,18 @@ export class CreateEventComponent implements OnInit {
 
   ngOnInit(): void {
     this.createEventForm = this.fb.group({
-      EventName: ['', Validators.required],
-      EventDescription: ['', Validators.required],
-      EventDate: ['', Validators.required]
+      name: ['', Validators.required],
+      introduction: ['', Validators.required],
+      date: ['', Validators.required],
+      lieu:['', Validators.required],
+      link:['', Validators.required],
     });
   }
   CreateEvent(){
+    console.log("my form is",this.createEventForm.value);
     this.service.CreateEvent(this.createEventForm.value)
-    .subscribe((res)=>{
-      console.log("success",res);
+   .subscribe((res)=>{
+     console.log("success",res);
     })
 
   }

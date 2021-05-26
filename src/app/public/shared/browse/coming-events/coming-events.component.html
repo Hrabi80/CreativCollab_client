@@ -7,12 +7,11 @@
         <p>Discover with us </p>
       </header>
       <div class="row">
-        <div *ngFor="let event of data" class="col-lg-4">
+        <div *ngFor="let event of data ;let index=index" class="col-lg-4">
           <div class="post-box">
-  
-            <span class="post-date">founded in 7 octobre 1956</span>
-            <h3 class="post-title">{{event.name}}</h3>
-            <a class="readmore stretched-link mt-auto" routerLink="/browse-events/{{event._id}}"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            <span class="post-date">{{event.introduction}}</span>
+            <h3 class="post-title">{{event.name}} in {{event.lieu}} at {{event.date}}</h3>          
+            <a class="readmore stretched-link mt-auto" routerLink="/event-details/{{event._id}}"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
       </div>

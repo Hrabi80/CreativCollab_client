@@ -8,37 +8,36 @@
     <form [formGroup]="createEventForm">
         <div class="form-group">
             <label for="exampleInputEmail1">Name</label>
-            <input type="text" class="form-control" formControlName="EventName" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter Name">
+            <input type="text" class="form-control" formControlName="name" id="exampleInputEmail1"
+                aria-describedby="emailHelp" placeholder="Enter Name">
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Description</label>
-            <textarea class="form-control" formControlName="EventDescription"></textarea>
+            <textarea class="form-control" formControlName="introduction"></textarea>
         </div>
         <div class="form-group ">
             <label for="exampleInputEmail1">Date</label>
-            <input type="date" class="form-control" id="exampleInputEmail1" 
-            formControlName="EventDate" aria-describedby="emailHelp"
-                placeholder="Enter object">
+            <input type="date" class="form-control" id="exampleInputEmail1" formControlName="date"
+                aria-describedby="emailHelp" placeholder="Enter date">
         </div>
 
         <div class="form-group">
-            <label for="exampleInputEmail1">lien inscription</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter object">
+            <label for="exampleInputEmail1">Inscription link</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" formControlName="link"
+                aria-describedby="emailHelp" placeholder="Enter Inscription link">
         </div>
 
         <div class="form-group">
-            <label for="exampleInputEmail1">Lieu</label>
-            <select class="form-control">
-                <option>Lieu</option>
+            <label for="exampleInputEmail1">Place</label>
+            <select class="form-control" formControlName="lieu">
+                <option value="sousse">Sousse</option>
+                <option value="Mehdia">Mehdia</option>
+                <option value="Monastir">Monastir</option>
             </select>
         </div>
-
-
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" (click)="CreateEvent()">Send</button>
+            <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+        </div>
     </form>
-</div>
-<div class="modal-footer">
-    <button type="submit" class="btn btn-primary" (click)="CreateEvent()">Send</button>
-    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
 </div>

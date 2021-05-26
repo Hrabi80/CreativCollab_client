@@ -10,16 +10,19 @@ export class EventService {
   private _url = environment.api_url;
   constructor(private _http: HttpClient) { }
   
-  CreateEvent(data: Event) {
+  CreateEvent(data: event) {
+    console.log("hereee",data);
     return this._http.post(this._url + '/event', data);
   }
 
   getAllEvents(){
-    return this._http.get<Array<event>>(this._url+'/events');
+    return this._http.get<Array<event>>(this._url+'/event');
   }
 
+  getEventByid(id:any){
+    return this._http.get<event>(this._url+'/event/'+id);
+  }
   EditEvent(data: Event){
-    // **************************************
     return this._http.put(this._url + '/event', data)
   }
 

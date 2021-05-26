@@ -5,25 +5,46 @@
     </button>
 </div>
 <div class="modal-body">
-    <form>
+    <form [formGroup]="EditProfileForm">
         <div class="form-group">
-            <label for="exampleInputEmail1">description</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter object">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" formControlName="username"
+                aria-describedby="emailHelp" value="{{user.username}}">
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">nom</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-               value="{{user.username}}">
-        </div>     
+            <label for="exampleInputEmail1">Place</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" formControlName="lieu"
+                aria-describedby="emailHelp" value="{{user.lieu}}" placeholder="Enter place">
+        </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">prenom</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter object">
-        </div> 
+            <label for="exampleInputEmail1">domaine 1</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" formControlName="lieu"
+                aria-describedby="emailHelp" value="{{user.domaine1}}" placeholder="Enter place">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">domaine 2</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" formControlName="lieu"
+                aria-describedby="emailHelp" value="{{user.domaine2}}" placeholder="Enter place">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">domaine 3</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" formControlName="lieu"
+                aria-describedby="emailHelp" value="{{user.domaine3}}" placeholder="Enter place">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">domaine 4</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" formControlName="lieu"
+                aria-describedby="emailHelp" value="{{user.domaine4}}" placeholder="Enter place">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">mail</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" formControlName="mail"
+                aria-describedby="emailHelp" value="{{user.mail}}" placeholder="Enter object">
+        </div>
+
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary"(click)="EditProfile()">Send</button>
+            <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+        </div>
     </form>
-</div>
-<div class="modal-footer">
-    <button type="submit" class="btn btn-primary">Send</button>
-    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
 </div>
