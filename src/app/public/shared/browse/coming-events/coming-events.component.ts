@@ -15,40 +15,39 @@ import { user } from 'src/app/models/user';
 export class ComingEventsComponent implements OnInit {
   id: any;
   current_user_id: any;
-  place:any;
+  place: any;
   constructor(private modalService: NgbModal,
     private eventService: EventService,
     private route: ActivatedRoute,
     private authService: AuthService) { }
-  data: Array<any>=[];
+  data: Array<any> = [];
   myevents!: Array<event>
   ngOnInit(): void {
 
     this.id = this.route.snapshot.paramMap.get('id')!;
     this.current_user_id = this.authService.getUserIdFromLocalStorage();
-    console.log("user issss",this.current_user_id);
+    console.log("user issss", this.current_user_id);
 
-   this.authService.getUserById(this.current_user_id)
-   .subscribe((res:user)=>{
-     console.log("resss",res);
-     console.log("user place is ",res.lieu);
-     this.place=res.lieu;
-   })
+    this.authService.getUserById(this.current_user_id)
+      .subscribe((res: user) => {
+        console.log("resss", res);
+        console.log("user place is ", res.lieu);
+        this.place = res.lieu;
+      })
 
 
     this.eventService.getAllEvents()
-      .subscribe((res:Array<any>) => {
-        var j=0;
-       
-         for (var i = 1; i < res.length; i++) {
-          if(res[i].lieu == this.place ){
-             this.data[j]=res[i];
+      .subscribe((res: Array<any>) => {
+        var j = 0;
+        console.log("resr",res);
+        for (var i = 1; i < res.length; i++) {
+          if (res[i].lieu == this.place) {
+            this.data[j] = res[i];
             j++;
-            console.log("my j== is ",j,"my data is===",this.data);
-            
-           }        
+            console.log("my j== is ", j, "my data is===", this.data);
+          }
         }
-        
+
       });
   }
   open() {

@@ -5,17 +5,17 @@
 
     <div class="container" data-aos="fade-up">
       <header class="section-header">
-        <h2>Associations</h2>
-        <p>Discover with us </p>
+        <h2>Welcome</h2>
+        <p>We recommend for you</p>
       </header>
       <div class="row">
-        <div *ngFor="let user of data" class="col-lg-4">
+        <div *ngFor="let rec of data" class="col-lg-4">
           <div class="post-box">
-            <div class="post-img"><img src="assets/img/Associations/croissant_rouge.jpg" class="img-fluid" alt="" style="
+            <div class="post-img"><img src="assets/img/avatar/{{user.avatar}}" class="img-fluid" alt="" style="
             max-width: 300px;max-height: 200px;display: block;margin-left: auto;margin-right: auto;
             "></div>
-            <span class="post-date">{{user.username}}</span>
-            <h3 class="post-title">{{user.mail}}</h3>
+            <span class="post-date">{{rec.username}}</span>
+            <h3 class="post-title">{{rec.mail}}</h3>
             <a href="blog-singe.html" class="readmore stretched-link mt-auto" routerLink="/profile/{{user._id}}"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
         </div>

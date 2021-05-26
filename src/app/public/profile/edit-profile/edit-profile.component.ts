@@ -3,7 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { user } from 'src/app/models/user';
 import { AuthService } from 'src/app/_services/auth.service';
-
+import { CustomerService } from 'src/app/_services/customer.service';
+import swal from 'sweetalert2';
 @Component({
   selector: 'app-edit-profile',
   templateUrl: './edit-profile.component.html',
@@ -16,6 +17,7 @@ export class EditProfileComponent implements OnInit {
   constructor(
     public activeModal: NgbActiveModal,
     private authService : AuthService,
+    private customer : CustomerService,
     private fb: FormBuilder) { }
 
   ngOnInit(): void {
@@ -24,6 +26,10 @@ export class EditProfileComponent implements OnInit {
       lieu: ['', Validators.required],
       mail: ['', Validators.required],
       link:['', Validators.required],
+      domaine1:['',Validators.required],
+      domaine2:['',Validators.required],
+      domaine3:['',Validators.required],
+      domaine4:['',Validators.required]
     });
 
     this.id= this.authService.getUserIdFromLocalStorage();
@@ -38,7 +44,18 @@ export class EditProfileComponent implements OnInit {
 
   EditProfile(){
     // this.authService.updateUser(this.id).subscribe(()=>{
-
+    this.customer.updateCustomer(this.EditProfileForm.value,this.authService.getUserIdFromLocalStorage())
+    .subscribe((res)=>{
+      console.log("resultat",res);
+      swal.fire(
+        'Done',
+        'updated successfully',
+        'success'
+      )
+      setTimeout(() => {
+         window.location.reload();
+      }, 700);
+    })
     // })
   }
 }

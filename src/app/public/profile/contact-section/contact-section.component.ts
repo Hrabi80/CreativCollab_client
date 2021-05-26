@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AddInvitationComponent } from '../add-invitation/add-invitation.component';
 import { EditContactComponent } from '../edit-contact/edit-contact.component';
 
 @Component({
@@ -16,5 +17,9 @@ export class ContactSectionComponent implements OnInit {
   }
   openeditconatct(){
     const modalRef=this.modalService.open(EditContactComponent)
+  }
+
+  openinvitation(){
+    const modalRef=this.modalService.open(AddInvitationComponent)
   }
 }

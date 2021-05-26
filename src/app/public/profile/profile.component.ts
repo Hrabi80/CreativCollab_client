@@ -7,6 +7,7 @@ import { user } from "src/app/models/user";
 import { AuthService } from "src/app/_services/auth.service";
 import { ActivatedRoute } from '@angular/router';
 import { EditDescriptionComponent } from "./description-section/edit-description/edit-description.component";
+import { AvatarComponent } from "./avatar/avatar.component";
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -22,7 +23,9 @@ export class ProfileComponent {
   isOwn: boolean = false;
 
   ngOnInit(): void {
+    
     this.id = this.route.snapshot.paramMap.get('id')!;
+    console.log('locla storage tokkee ', localStorage.getItem('access_token'));
     this.current_user_id = this.authService.getUserIdFromLocalStorage();
     if (this.current_user_id == this.id)
       this.isOwn = true;
@@ -30,6 +33,9 @@ export class ProfileComponent {
       this.user = res;
       console.log("role in profileddd=== ", this.user);
     })
+
+
+   
   }
 
   openCreateEvent(){
@@ -44,5 +50,8 @@ export class ProfileComponent {
 
   openEditDescription() {
     const modalRef = this.modalService.open(EditDescriptionComponent);
+  }
+  openAvatar(){
+    const modalRef = this.modalService.open(AvatarComponent);
   }
 }

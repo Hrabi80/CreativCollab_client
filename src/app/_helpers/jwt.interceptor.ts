@@ -9,12 +9,8 @@ import { environment } from 'src/environments/environment';
 @Injectable()
 
 export class JwtInterceptor implements HttpInterceptor {
-    private _URLPattern = environment.api_url + '/event/';
-    constructor(private auth: AuthService
-        ) { 
-         
-        }
-
+    private _URLPattern = environment.api_url + '/user/';
+    constructor(private auth: AuthService) { }
         intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
           console.log('intercepted', req);
            if(req.url.startsWith(this._URLPattern)){

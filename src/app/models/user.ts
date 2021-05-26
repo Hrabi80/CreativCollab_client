@@ -1,8 +1,10 @@
-export interface user {
-    _id: string,
-    username: string;
-    mail: string;
-    role: string;
+import { skill } from "./skills";
+
+export interface user{
+    _id:string,
+    username:string;
+    mail:string;
+    role:string;
     about: string;
     linkedin: String;
     facebook: String;
@@ -14,4 +16,5 @@ export interface user {
     domaine2: String;
     domaine3: String;
     domaine4: String;
+    skills:[skill];
 }
