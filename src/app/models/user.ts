@@ -7,11 +7,12 @@ export interface user{
     role:string;
     about: string;
     linkedin: String;
-    facebook:String;
+    facebook: String;
     twitter: String;
     avatar:String;
     tel:String;
     place:String;
+    lieu:String;
     domaine1: String;
     domaine2: String;
     domaine3: String;

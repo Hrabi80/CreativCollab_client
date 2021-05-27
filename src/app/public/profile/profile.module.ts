@@ -15,6 +15,9 @@ import { TrainerModule } from 'src/app/trainer/trainer.module';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
 import { EditDescriptionComponent } from './description-section/edit-description/edit-description.component';
 import { AvatarComponent } from './avatar/avatar.component';
+import { InvitBoxComponent } from './invit-box/invit-box.component';
+import { ListInvitationsComponent } from './list-invitations/list-invitations.component';
+import { RecommendationComponent } from './recommendation/recommendation.component';
 @NgModule({
   declarations: [
     SideBarComponent,
@@ -26,7 +29,10 @@ import { AvatarComponent } from './avatar/avatar.component';
     EditProfileComponent,
     EditContactComponent,
     EditDescriptionComponent,
-    AvatarComponent],
+    AvatarComponent,
+    InvitBoxComponent,
+    ListInvitationsComponent,
+    RecommendationComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,

@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="page-header header-filter"
+  style="background-image: url('https://www.wnsdenali.com/Portals/0/Images/HeaderBanner/desktop/566/19/Events_header.jpg'); background-size: cover; background-position: top center;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+        <div class="card card-login">
+          <form class="form" method="" action="">
+            <div class="card-header card-header-primary text-center">
+              <h4 class="card-title">Event details</h4>
+            </div>
+            <div class="card-body">
+              <div class="info info-horizontal">
+                <div class="icon icon-primary">
+                  <i class="material-icons">code</i>
+                </div>
+                <div class="description">
+                  <h4 class="info-title">{{data.name}} at {{data.lieu}}</h4>
+                  <h4 class="info-title">{{data.date|date:'mediumDate'}}</h4>
+                  <p class="description">
+                    {{data.introduction}}
+                  </p>                 
+                </div>
+              </div>
+            </div>
+            <div class="footer text-center">
+              <a href="#pablo" class="btn btn-primary btn-link btn-wd btn-lg">Go back</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

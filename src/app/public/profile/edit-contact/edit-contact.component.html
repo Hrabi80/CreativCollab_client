@@ -5,25 +5,35 @@
     </button>
 </div>
 <div class="modal-body">
-    <form>
+    <form [formGroup]="form">
         <div class="form-group">
             <label for="exampleInputEmail1">facebook</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter your facebook">
+                placeholder="Enter your facebook" formControlName="facebook">
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">gmail</label>
+            <label for="exampleInputEmail1">Linkedin</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter your email">
+                placeholder="Enter your email" formControlName="linkedin">
         </div>     
         <div class="form-group">
             <label for="exampleInputEmail1">phone</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter object">
+                placeholder="Enter object" formControlName="tel">
         </div> 
-    </form>
-</div>
-<div class="modal-footer">
-    <button type="submit" class="btn btn-primary">Send</button>
-    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+        <div class="form-group">
+            <label for="exampleInputEmail1">twitter</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter object" formControlName="twitter">
+        </div> 
+
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" (click)="update()">Send</button>
+            <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+        </div>
+
+
+
+</form>
+
 </div>

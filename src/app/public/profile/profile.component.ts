@@ -37,24 +37,14 @@ export class ProfileComponent {
 
    
   }
-  open() {
-    this.id = this.route.snapshot.paramMap.get('id')!;
-    this.current_user_id = this.authService.getUserIdFromLocalStorage();
-    if (this.current_user_id == this.id){
-      this.isOwn = true;
-      const modalRef = this.modalService.open(EditProfileComponent);
-    }
-    else{
-      this.isOwn = false;
-      const modalRef = this.modalService.open(MessageComponent);
-    }
-    
-  }
 
-  openmessage() {
+  openCreateEvent(){
     const modalRef = this.modalService.open(CreateEventComponent);
   }
-  openeditprofile() {
+  openmessage() {
+    const modalRef = this.modalService.open(MessageComponent);
+  }
+  openEditProfile() {
     const modalRef = this.modalService.open(EditProfileComponent);
   }
 

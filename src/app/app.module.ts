@@ -19,7 +19,7 @@ import { SignUpComponent } from './authentifications/sign-up/sign-up.component';
 import { SharedModule } from './public/shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowseComponent } from './public/landing-page/browse/browse.component';
-
+import { AssociationModule } from './association/association.module';
 
 @NgModule({
   declarations: [
@@ -35,6 +35,7 @@ import { BrowseComponent } from './public/landing-page/browse/browse.component';
     LoginComponent,
     SignUpComponent,
     BrowseComponent,
+   // EditEventComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +45,7 @@ import { BrowseComponent } from './public/landing-page/browse/browse.component';
     ReactiveFormsModule,
     HttpClientModule,
     SharedModule,
+    AssociationModule,
     NgbModule
   ],
   providers: [

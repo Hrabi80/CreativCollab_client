@@ -1,4 +1,5 @@
   <!-- ======= Recent Blog Posts Section ======= -->
+  <app-navbar></app-navbar>
   <section id="recent-blog-posts" class="recent-blog-posts">
 
     <div class="container" data-aos="fade-up">
@@ -9,10 +10,17 @@
       <div class="row">
         <div *ngFor="let user of data" class="col-lg-4">
           <div class="post-box">
-            <div class="post-img"><img src="assets/img/Associations/croissant_rouge.jpg" class="img-fluid" alt="" style="
+           
+            <div class="post-img" *ngIf="user.avatar != null">
+              <img src="assets/img/avatar/{{user.avatar}}" class="img-fluid" alt="" style="
             max-width: 300px;max-height: 200px;display: block;margin-left: auto;margin-right: auto;
             "></div>
-            <span class="post-date">founded in 7 octobre 1956</span>
+
+<div class="post-img" *ngIf="!user.avatar">
+  <img src="assets/img/avatar/avatar4.png" class="img-fluid" alt="" style="
+max-width: 300px;max-height: 200px;display: block;margin-left: auto;margin-right: auto;
+"></div>
+            <span class="post-date">{{user.username}}</span>
             <h3 class="post-title">{{user.mail}}</h3>
             <a href="blog-singe.html" class="readmore stretched-link mt-auto" routerLink="/profile/{{user._id}}"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>

@@ -8,9 +8,8 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" routerLink="/home">Home</a></li>
-          <li><a class="nav-link scrollto" routerLink="/browse">Browse</a></li>
-          <li><a class="nav-link scrollto active" href="#features">Tutorial</a></li>
-          <li><a class="nav-link scrollto">Contact</a></li>
+          <li><a class="nav-link scrollto" routerLink="/browse-association">Browse</a></li>
+          <li *ngIf="isconnected"><a class="nav-link scrollto" routerLink="/browse-events">event near you </a></li>
           <li *ngIf="isconnected"><a class="nav-link scrollto" routerLink="/profile/{{id}}">My profile</a></li>
           <li *ngIf="isconnected == false"><button class="getstarted scrollto" routerLink="/login">Sign In</button></li>
           <li *ngIf="isconnected == false"><a class="getstarted scrollto" routerLink="/register">Sign Up</a></li>

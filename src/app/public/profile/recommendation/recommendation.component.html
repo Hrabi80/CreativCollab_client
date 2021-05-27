@@ -1,0 +1,45 @@
+    
+    <app-navbar></app-navbar>
+    <!-- ======= Speakers Section ======= -->
+    <section id="services" class="services">
+
+        <div class="container" data-aos="fade-up">
+  
+          <header class="section-header">
+            <h2>Try to communicate with others</h2>
+            <p>Some profile may interest you</p>
+          </header>
+  
+          <div class="row gy-4">
+           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500" *ngFor="let item of recommended" >
+            <div class="service-box red">
+                <div class="card-profile-image">
+               
+
+                    <img *ngIf="item.avatar != null" src="assets/img/avatar/{{item.avatar}}" class="rounded-circle">
+                    <img *ngIf="item.avatar == null" src="assets/img/avatar/avatar1.png" class="rounded-circle">
+                                     
+                  
+                </div>
+                <br>
+              <h3>{{item.username}}</h3>
+              <p>In {{item.place}}</p>
+              <a routerLink="/profile/{{item._id}}" class="read-more"><span>See more</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          
+         
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-box blue">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Moahmed Mounir</h3>
+              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </section><!-- End Speakers Section -->

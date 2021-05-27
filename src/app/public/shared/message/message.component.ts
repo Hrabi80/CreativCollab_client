@@ -1,8 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder,FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { message } from 'src/app/models/message';
-import { AuthService } from 'src/app/_services/auth.service';
 import { CustomerService } from 'src/app/_services/customer.service';
 
 @Component({

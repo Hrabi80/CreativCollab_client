@@ -3,17 +3,35 @@
         <div class="card-body">
             <!-- <h6 class="card-category text-info">Contact</h6> -->
             <ul>
-                <li><a href="#pablo" class="btn btn-just-icon btn-link btn-facebook"><i class="fa fa-facebook"></i> www.facebook.com/JS_TN</a>
+                <li *ngIf="!mycontact.facebook">
+                    <a class="btn btn-just-icon btn-link btn-facebook"><i
+                            class="fa fa-facebook"></i> www.facebook.com/name</a>
                 </li>
-                <li><a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i> twitter.com/JsCommunityT</a>
+                <li *ngIf="mycontact.facebook != null">
+                    <a class="btn btn-just-icon btn-link btn-facebook"><i
+                            class="fa fa-facebook"></i> {{mycontact.facebook}}</a>
                 </li>
-                <li><a href="#pablo" class="btn btn-just-icon btn-link btn-google"><i
-                    class="fa fa-google"></i>JsCommunity@gmail.com</a></li>
-                <li><a href="#pablo" class="btn btn-just-icon btn-link btn-phone"><i
+                <li *ngIf="!mycontact.twitter">
+                    <a class="btn btn-just-icon btn-link btn-facebook"><i
+                            class="fa fa-facebook"></i> www.twitter.com/name</a>
+                </li>
+                <li *ngIf="mycontact.twitter != null">
+                    <a class="btn btn-just-icon btn-link btn-twitter"><i
+                            class="fa fa-twitter"></i> {{mycontact.twitter}}</a>
+                </li>
+                <li *ngIf="!mycontact.linkedin"><a  class="btn btn-just-icon btn-link btn-linkedin"><i
+                            class="fa fa-linkedin"></i> linkedin.com/name</a>
+                </li>
+                <li *ngIf="mycontact.linkedin !=null"><a  class="btn btn-just-icon btn-link btn-linkedin"><i
+                    class="fa fa-linkedin"></i> {{mycontact.linkedin}}</a>
+               </li>
+                <li><a  class="btn btn-just-icon btn-link btn-google"><i
+                    class="fa fa-google"></i> {{mycontact.mail}}</a></li>
+                <li><a class="btn btn-just-icon btn-link btn-phone"><i
                             class="fa fa-phone"></i>+216 98 245 107</a></li>
             </ul>
 
-            <button class="btn-primary" (click)="openeditconatct()">Edit contact</button>
+            <button class="btn-primary" (click)="openeditconatct()" *ngIf="isOwnContact">Edit contact</button>
         </div>
     </div>
 </div>
